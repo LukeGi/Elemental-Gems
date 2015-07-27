@@ -2,6 +2,7 @@ package me.bluemonster.elgems.items;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import me.bluemonster.elgems.ElementalGems;
+import me.bluemonster.elgems.creativetabs.EGCreativetabs;
 import net.minecraft.item.Item;
 
 /**
@@ -12,7 +13,7 @@ public class ModItem extends Item
     public ModItem(String name){
         setUnlocalizedName(ElementalGems.MODID + "_" + name);
         setTextureName(ElementalGems.MODID + ":" + name);
-        setCreativeTab(ElementalGems.GTAB);
+        setCreativeTab(EGCreativetabs.GTAB);
         GameRegistry.registerItem(this, name);
     }
 }
