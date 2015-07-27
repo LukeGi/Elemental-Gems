@@ -1,0 +1,21 @@
+[
+{
+  "modid": "elgems",
+  "name": "Elemental Gems",
+  "description": "Gems, gems, gems, and guess what... more gems!",
+  "version": "${mod_version}",
+  "mcversion": "${minecraft_version}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": [
+    "bluemonster122"
+  ],
+  "credits": "bluemonster122-Coding; asdaa-Textures",
+  "logoFile": "",
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+  ]
+}
+]

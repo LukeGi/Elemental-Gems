@@ -5,6 +5,8 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
+import java.util.Objects;
+
 /**
  * @author bluemonster122 <boo122333@gmail.com>
  */
@@ -50,7 +52,7 @@ public class HoeWater extends ModItem
             for (int j = -4; j <= 4; j++)
             {
                 int nx = x + i, nz = z + j;
-                if (world.getBlock(nx, y, nz) == Blocks.grass || world.getBlock(nx, y,nz) == Blocks.dirt)
+                if (((Objects.equals(world.getBlock(nx, y, nz), Blocks.grass)) || (Objects.equals(world.getBlock(nx, y, nz), Blocks.dirt))) && (world.isAirBlock(nx, y + 1, nz)))
                 {
                     if (i == 0 && j == 0)
                     {
