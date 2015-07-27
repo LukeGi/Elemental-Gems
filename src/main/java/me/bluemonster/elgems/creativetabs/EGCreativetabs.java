@@ -1,7 +1,7 @@
 package me.bluemonster.elgems.creativetabs;
 
 import me.bluemonster.elgems.reference.Reference;
-import me.bluemonster.elgems.registry.ModRegistery;
+import me.bluemonster.elgems.registry.ModRegistry;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
@@ -15,7 +15,7 @@ public class EGCreativetabs
         @Override
         public Item getTabIconItem()
         {
-            return ModRegistery.plain_gem;
+            return ModRegistry.plain_gem;
         }
     };
 }

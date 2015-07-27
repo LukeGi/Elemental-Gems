@@ -9,9 +9,8 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import me.bluemonster.elgems.proxy.IProxy;
 import me.bluemonster.elgems.reference.Reference;
-import me.bluemonster.elgems.registry.ModRegistery;
+import me.bluemonster.elgems.registry.ModRegistry;
 import me.bluemonster.elgems.utility.LogHelper;
-import scala.xml.Elem;
 
 /**
  * @author bluemonster122 <boo122333@gmail.com>
@@ -29,7 +28,7 @@ public class ElementalGems
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-        ModRegistery.registerAll();
+        ModRegistry.registerAll();
         LogHelper.info(String.format("%s has finished pre-initializing.", Reference.MOD_NAME));
     }
 

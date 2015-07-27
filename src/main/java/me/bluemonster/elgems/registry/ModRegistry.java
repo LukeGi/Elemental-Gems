@@ -16,10 +16,10 @@ import java.util.List;
 /**
  * @author bluemonster122 <boo122333@gmail.com>
  */
-public class ModRegistery
+public class ModRegistry
 {
-    public static List<Item> registerdItems = new ArrayList<>();
-    public static List<Block> registerdBlocks = new ArrayList<>();
+    public static List<Item> registeredItems = new ArrayList<>();
+    public static List<Block> registeredBlocks = new ArrayList<>();
 
     public static void registerAll(){
         registerItems();
@@ -49,10 +49,10 @@ public class ModRegistery
 
     private static void printLogs()
     {
-        for (Item item : registerdItems){
+        for (Item item : registeredItems){
             LogHelper.info("Successfully loaded " + ((ModItem)item).name);
         }
-        for (Block block : registerdBlocks){
+        for (Block block : registeredBlocks){
             LogHelper.info("Successfully loaded " + ((ModBlock)block).name);
         }
     }

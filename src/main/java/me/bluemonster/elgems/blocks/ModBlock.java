@@ -3,7 +3,7 @@ package me.bluemonster.elgems.blocks;
 import cpw.mods.fml.common.registry.GameRegistry;
 import me.bluemonster.elgems.creativetabs.EGCreativetabs;
 import me.bluemonster.elgems.reference.Reference;
-import me.bluemonster.elgems.registry.ModRegistery;
+import me.bluemonster.elgems.registry.ModRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
@@ -22,6 +22,6 @@ public class ModBlock extends Block
         setBlockTextureName(Reference.MOD_ID + ":" + this.name);
         setCreativeTab(EGCreativetabs.GTAB);
         GameRegistry.registerBlock(this, this.name);
-        ModRegistery.registerdBlocks.add(this);
+        ModRegistry.registeredBlocks.add(this);
     }
 }

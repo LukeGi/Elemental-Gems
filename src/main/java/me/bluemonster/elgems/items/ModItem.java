@@ -3,7 +3,7 @@ package me.bluemonster.elgems.items;
 import cpw.mods.fml.common.registry.GameRegistry;
 import me.bluemonster.elgems.creativetabs.EGCreativetabs;
 import me.bluemonster.elgems.reference.Reference;
-import me.bluemonster.elgems.registry.ModRegistery;
+import me.bluemonster.elgems.registry.ModRegistry;
 import net.minecraft.item.Item;
 
 /**
@@ -19,6 +19,6 @@ public class ModItem extends Item
         setTextureName(Reference.MOD_ID + ":" + this.name);
         setCreativeTab(EGCreativetabs.GTAB);
         GameRegistry.registerItem(this, this.name);
-        ModRegistery.registerdItems.add(this);
+        ModRegistry.registeredItems.add(this);
     }
 }
