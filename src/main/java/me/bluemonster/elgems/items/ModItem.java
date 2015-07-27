@@ -1,8 +1,9 @@
 package me.bluemonster.elgems.items;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import me.bluemonster.elgems.ElementalGems;
 import me.bluemonster.elgems.creativetabs.EGCreativetabs;
+import me.bluemonster.elgems.reference.Reference;
+import me.bluemonster.elgems.registry.ModRegistery;
 import net.minecraft.item.Item;
 
 /**
@@ -10,10 +11,14 @@ import net.minecraft.item.Item;
  */
 public class ModItem extends Item
 {
+    public String name;
+
     public ModItem(String name){
-        setUnlocalizedName(ElementalGems.MODID + "_" + name);
-        setTextureName(ElementalGems.MODID + ":" + name);
+        this.name = name;
+        setUnlocalizedName(Reference.MOD_ID + "_" + this.name);
+        setTextureName(Reference.MOD_ID + ":" + this.name);
         setCreativeTab(EGCreativetabs.GTAB);
-        GameRegistry.registerItem(this, name);
+        GameRegistry.registerItem(this, this.name);
+        ModRegistery.registerdItems.add(this);
     }
 }

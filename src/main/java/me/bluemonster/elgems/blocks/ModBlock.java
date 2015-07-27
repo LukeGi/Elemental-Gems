@@ -1,8 +1,9 @@
 package me.bluemonster.elgems.blocks;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import me.bluemonster.elgems.ElementalGems;
 import me.bluemonster.elgems.creativetabs.EGCreativetabs;
+import me.bluemonster.elgems.reference.Reference;
+import me.bluemonster.elgems.registry.ModRegistery;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
@@ -11,13 +12,16 @@ import net.minecraft.block.material.Material;
  */
 public class ModBlock extends Block
 {
+    public String name;
 
-    protected ModBlock(Material material, String name)
+    public ModBlock(Material material, String name)
     {
         super(material);
-        setBlockName(ElementalGems.MODID + "_" + name);
-        setBlockTextureName(ElementalGems.MODID + ":" + name);
+        this.name = name;
+        setBlockName(Reference.MOD_ID + "_" + this.name);
+        setBlockTextureName(Reference.MOD_ID + ":" + this.name);
         setCreativeTab(EGCreativetabs.GTAB);
-        GameRegistry.registerBlock(this, name);
+        GameRegistry.registerBlock(this, this.name);
+        ModRegistery.registerdBlocks.add(this);
     }
 }
