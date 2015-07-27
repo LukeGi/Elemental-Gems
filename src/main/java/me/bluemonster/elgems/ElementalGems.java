@@ -25,7 +25,7 @@ public class ElementalGems
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-        ModRegistery.registerItems();
+        ModRegistery.registerAll();
     }
 
     @EventHandler

@@ -1,8 +1,10 @@
 package me.bluemonster.elgems.registry;
 
+import me.bluemonster.elgems.blocks.GemStorage;
 import me.bluemonster.elgems.items.GemPlain;
 import me.bluemonster.elgems.items.GemWater;
 import me.bluemonster.elgems.items.HoeWater;
+import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 
 /**
@@ -10,15 +12,28 @@ import net.minecraft.item.Item;
  */
 public class ModRegistery
 {
+    public static void registerAll(){
+        registerItems();
+        registerBlocks();
+    }
+
     public static Item plain_gem;
     public static Item water_gem;
     public static Item water_hoe;
 
-    public static void registerItems()
+    private static void registerItems()
     {
         plain_gem = new GemPlain();
         water_gem = new GemWater();
         water_hoe = new HoeWater();
     }
 
+    public static Block plain_gem_block;
+    public static Block water_gem_block;
+
+    private static void registerBlocks()
+    {
+        plain_gem_block = new GemStorage("plain");
+        water_gem_block = new GemStorage("water");
+    }
 }
