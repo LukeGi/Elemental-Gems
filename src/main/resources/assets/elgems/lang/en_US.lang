@@ -3,10 +3,10 @@
 itemGroup.elgems=Elemental Gems
 
 #Blocks
-tile.elgems_plain_gem_block.name=Plain Gem Storage Block
-tile.elgems_water_gem_block.name=Water Gem Storage Block
+tile.elgems:plain_gem_block.name=Plain Gem Storage Block
+tile.elgems:water_gem_block.name=Water Gem Storage Block
 
 #Items
-item.elgems_plain_gem.name=Plain Gem
-item.elgems_water_gem.name=Water Gem
-item.elgems_water_hoe.name=Water Hoe
+item.elgems:plain_gem.name=Plain Gem
+item.elgems:water_gem.name=Water Gem
+item.elgems:water_hoe.name=Water Hoe
