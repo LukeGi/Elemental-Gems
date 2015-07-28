@@ -1,5 +1,6 @@
 package me.bluemonster.elgems.items;
 
+import me.bluemonster.elgems.registry.Names;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
@@ -10,7 +11,7 @@ import net.minecraft.world.World;
  */
 public class GemWater extends ModItem
 {
-    public static final String name = "water_gem";
+    public static final String name = Names.Items.GEMS[1];
 
     public GemWater()
     {

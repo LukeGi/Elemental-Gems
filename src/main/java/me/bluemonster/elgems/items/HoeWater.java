@@ -1,23 +1,24 @@
 package me.bluemonster.elgems.items;
 
+import me.bluemonster.elgems.registry.Names;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
+import javax.tools.Tool;
 import java.util.Objects;
 
 /**
  * @author bluemonster122 <boo122333@gmail.com>
  */
-public class HoeWater extends ModItem
+public class HoeWater extends ModItemTool
 {
     public static final String name = "water_hoe";
 
     public HoeWater()
     {
-        super(name);
-        this.setMaxDamage(5);
+        super(name, Names.Tools.HOE, ToolMaterials.WATER);
     }
 
     @Override
