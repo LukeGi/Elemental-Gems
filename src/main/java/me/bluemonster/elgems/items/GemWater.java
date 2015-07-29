@@ -1,6 +1,6 @@
 package me.bluemonster.elgems.items;
 
-import me.bluemonster.elgems.registry.Names;
+import me.bluemonster.elgems.reference.Names;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;

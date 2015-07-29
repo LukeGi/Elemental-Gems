@@ -1,6 +1,6 @@
 package me.bluemonster.elgems.items;
 
-import me.bluemonster.elgems.registry.Names;
+import me.bluemonster.elgems.reference.Names;
 
 /**
  * @author bluemonster122 <boo122333@gmail.com>

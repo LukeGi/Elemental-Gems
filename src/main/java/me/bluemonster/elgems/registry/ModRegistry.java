@@ -3,6 +3,7 @@ package me.bluemonster.elgems.registry;
 import me.bluemonster.elgems.blocks.GemStorage;
 import me.bluemonster.elgems.blocks.ModBlock;
 import me.bluemonster.elgems.items.*;
+import me.bluemonster.elgems.reference.Names;
 import me.bluemonster.elgems.utility.LogHelper;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -15,8 +16,8 @@ import java.util.List;
  */
 public class ModRegistry
 {
-    public static List<Item> registeredItems = new ArrayList<>();
-    public static List<Block> registeredBlocks = new ArrayList<>();
+    public static List<Item> registeredItems = new ArrayList<Item>();
+    public static List<Block> registeredBlocks = new ArrayList<Block>();
 
     public static void registerAll(){
         registerItems();

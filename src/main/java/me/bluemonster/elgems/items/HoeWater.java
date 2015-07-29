@@ -1,12 +1,11 @@
 package me.bluemonster.elgems.items;
 
-import me.bluemonster.elgems.registry.Names;
+import me.bluemonster.elgems.reference.Names;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-import javax.tools.Tool;
 import java.util.Objects;
 
 /**
@@ -14,7 +13,7 @@ import java.util.Objects;
  */
 public class HoeWater extends ModItemTool
 {
-    public static final String name = "water_hoe";
+    public static final String name = Names.Items.WATER_HOE;
 
     public HoeWater()
     {
