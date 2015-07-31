@@ -36,7 +36,7 @@ public class HoeWater extends ModItemTool
                     canHoe = false;
             }
 
-        if (canHoe)
+        if (canHoe && !world.isRemote)
         {
             superHoeActivate(x, y, z, world);
             itemStack.damageItem(1, player);

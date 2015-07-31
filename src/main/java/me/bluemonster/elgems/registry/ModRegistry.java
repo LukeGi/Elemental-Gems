@@ -28,6 +28,7 @@ public class ModRegistry
     public static Item plain_gem;
     public static Item water_gem;
     public static Item fire_gem;
+    public static Item earth_gem;
     public static Item water_hoe;
 
     private static void registerItems()
@@ -35,18 +36,21 @@ public class ModRegistry
         plain_gem = new GemPlain();
         water_gem = new GemWater();
         fire_gem = new GemFire();
+        earth_gem = new EarthGem();
         water_hoe = new HoeWater();
     }
 
     public static Block plain_gem_block;
     public static Block water_gem_block;
     public static Block fire_gem_block;
+    public static Block earth_gem_block;
 
     private static void registerBlocks()
     {
         plain_gem_block = new GemStorage(Names.Blocks.PLAIN);
         water_gem_block = new GemStorage(Names.Blocks.WATER);
         fire_gem_block = new GemStorage(Names.Blocks.FIRE);
+        earth_gem_block = new GemStorage(Names.Blocks.EARTH);
     }
 
     private static void printLogs()

@@ -51,6 +51,17 @@ public class GemFire extends ModItem
         }
     }
 
+    /**
+     * This method checks to see if the block you want to turn into fire is air, and if it is then it does.
+     *
+     * @param pos       of block clicked
+     * @param direction from block fire going
+     * @param stack     should be FireGemses
+     * @param world     current world
+     * @param side      of block clicked
+     * @param player    holding stack in world
+     * @return true if fire, false if not.
+     */
     private boolean doFire(BlockPos pos, ForgeDirection direction, ItemStack stack, World world, int side, EntityPlayer player)
     {
         BlockPos newPos = new BlockPos(pos.x + direction.offsetX, pos.y + direction.offsetY, pos.z + direction.offsetZ);
@@ -58,11 +69,11 @@ public class GemFire extends ModItem
         if ((world.isAirBlock(newPos.x, newPos.y, newPos.z)) && ((!player.canPlayerEdit(newPos.x, newPos.y, newPos.z, side, stack)) || (!player.canPlayerEdit(pos.x, pos.y, pos.z, side, stack))))
         {
             return false;
-        } else
+        } else if (!world.isRemote)
         {
             world.setBlock(newPos.x, newPos.y, newPos.z, Blocks.fire);
             stack.stackSize--;
             return true;
-        }
+        } else return false;
     }
 }

@@ -10,6 +10,7 @@ public class Names
         public static final String PLAIN = "plain_gem_block";
         public static final String WATER = "water_gem_block";
         public static final String FIRE = "fire_gem_block";
+        public static final String EARTH = "earth_gem_block";
     }
 
     public static final class Items
@@ -18,14 +19,18 @@ public class Names
                 "plain_gem",
                 "water_gem",
                 "fire_gem",
+                "earth_gem",
         };
         public static final String WATER_HOE = "water_hoe";
     }
 
     public static final class Tools
     {
-        public static final String PICK = "PICK";
+        public static final String AXE = "AXE";
         public static final String HOE = "HOE";
+        public static final String PICK = "PICK";
+        public static final String SHOVEL = "SHOVEL";
+        public static final String SWORD = "SWORD";
     }
 
     public static final class ModInfo
