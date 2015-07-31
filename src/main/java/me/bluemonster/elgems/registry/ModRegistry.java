@@ -21,7 +21,8 @@ public class ModRegistry
 
     public static void registerAll(){
         registerItems();
-        registerBlocks();
+//        registerBlocks();
+        registerBlocksTEST();
         printLogs();
     }
 
@@ -30,6 +31,7 @@ public class ModRegistry
     public static Item fire_gem;
     public static Item earth_gem;
     public static Item water_hoe;
+    public static Item earth_pick;
 
     private static void registerItems()
     {
@@ -38,19 +40,30 @@ public class ModRegistry
         fire_gem = new GemFire();
         earth_gem = new EarthGem();
         water_hoe = new HoeWater();
+        earth_pick = new PickEarth();
     }
 
-    public static Block plain_gem_block;
-    public static Block water_gem_block;
-    public static Block fire_gem_block;
-    public static Block earth_gem_block;
+//    public static Block plain_gem_block;
+//    public static Block water_gem_block;
+//    public static Block fire_gem_block;
+//    public static Block earth_gem_block;
+//
+//    private static void registerBlocks()
+//    {
+//        plain_gem_block = new GemStorage(Names.Blocks.PLAIN);
+//        water_gem_block = new GemStorage(Names.Blocks.WATER);
+//        fire_gem_block = new GemStorage(Names.Blocks.FIRE);
+//        earth_gem_block = new GemStorage(Names.Blocks.EARTH);
+//    }
 
-    private static void registerBlocks()
-    {
-        plain_gem_block = new GemStorage(Names.Blocks.PLAIN);
-        water_gem_block = new GemStorage(Names.Blocks.WATER);
-        fire_gem_block = new GemStorage(Names.Blocks.FIRE);
-        earth_gem_block = new GemStorage(Names.Blocks.EARTH);
+    public static Block[] gemStorage = new Block[Names.Items.GEMS.length];
+
+    private static void registerBlocksTEST(){
+        Names.Blocks.genNames();
+        for (int i = 0; i < Names.Blocks.GEM_STORAGE.length; i++)
+        {
+            gemStorage[i] = new GemStorage(Names.Blocks.GEM_STORAGE[i]);
+        }
     }
 
     private static void printLogs()

@@ -7,6 +7,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import me.bluemonster.elgems.items.PickEarth;
 import me.bluemonster.elgems.proxy.IProxy;
 import me.bluemonster.elgems.reference.Names;
 import me.bluemonster.elgems.registry.ModRegistry;
