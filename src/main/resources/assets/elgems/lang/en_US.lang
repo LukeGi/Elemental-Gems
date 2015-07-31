@@ -1,12 +1,19 @@
 
-#Creative Tabs
+            #Creative Tabs
 itemGroup.elgems=Elemental Gems
 
-#Blocks
+                #Blocks
 tile.elgems:plain_gem_block.name=Plain Gem Storage Block
 tile.elgems:water_gem_block.name=Water Gem Storage Block
 
-#Items
+                #Items
+
+#Gems
 item.elgems:plain_gem.name=Plain Gem
 item.elgems:water_gem.name=Water Gem
+item.elgems:fire_gem.name=Fire Gem
+item.elgems:earth_gem.name=Earth Gem
+
+#Tools
 item.elgems:water_hoe.name=Water Hoe
+item.elgems:earth_pick.name=Earth Pick

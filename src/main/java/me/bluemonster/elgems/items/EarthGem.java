@@ -7,6 +7,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+import net.minecraftforge.common.util.ForgeDirection;
 
 /**
  * @author bluemonster122 <boo122333@gmail.com>
@@ -27,11 +28,13 @@ public class EarthGem extends ModItem
         if (!player.canPlayerEdit(x, y, z, side, itemStack))
             return false;
         else
-            return makeDirt(itemStack, world, pos);
+            return makeDirt(itemStack, world, pos, side);
     }
 
-    private boolean makeDirt(ItemStack itemStack, World world, BlockPos pos)
+    private boolean makeDirt(ItemStack itemStack, World world, BlockPos pos, int side)
     {
+        ForgeDirection dir;
+
         if (!world.isRemote && world.getBlock(pos.x, pos.y, pos.z).getMaterial().equals(Material.rock))
         {
             world.setBlock(pos.x, pos.y, pos.z, Blocks.dirt);
