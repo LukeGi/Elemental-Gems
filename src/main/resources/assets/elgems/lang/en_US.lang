@@ -5,6 +5,8 @@ itemGroup.elgems=Elemental Gems
                 #Blocks
 tile.elgems:plain_gem_block.name=Plain Gem Storage Block
 tile.elgems:water_gem_block.name=Water Gem Storage Block
+tile.elgems:fire_gem_block.name=Fire Gem Storage Block
+tile.elgems:earth_gem_block.name=Earth Gem Storage Block
 
                 #Items
 

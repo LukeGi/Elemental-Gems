@@ -29,6 +29,7 @@ public class Names
                 "water_gem",
                 "fire_gem",
                 "earth_gem",
+                "living_gem",
         };
         public static final String WATER_HOE = "water_hoe";
         public static final String EARTH_PICK = "earth_pick";

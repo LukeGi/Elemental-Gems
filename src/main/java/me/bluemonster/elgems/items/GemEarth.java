@@ -12,11 +12,11 @@ import net.minecraftforge.common.util.ForgeDirection;
 /**
  * @author bluemonster122 <boo122333@gmail.com>
  */
-public class EarthGem extends ModItem
+public class GemEarth extends ModItem
 {
     public static final String name = Names.Items.GEMS[3];
 
-    public EarthGem()
+    public GemEarth()
     {
         super(name);
     }

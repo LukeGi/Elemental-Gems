@@ -50,7 +50,7 @@ public class GemFire extends ModItem
     private boolean doFire(BlockPos pos, ForgeDirection direction, ItemStack stack, World world, int side, EntityPlayer player)
     {
         BlockPos newPos = new BlockPos(pos.x + direction.offsetX, pos.y + direction.offsetY, pos.z + direction.offsetZ);
-        Random random = new Random();
+        Random random = world.rand;
         if ((world.isAirBlock(newPos.x, newPos.y, newPos.z)) && ((!player.canPlayerEdit(newPos.x, newPos.y, newPos.z, side, stack)) || (!player.canPlayerEdit(pos.x, pos.y, pos.z, side, stack))))
         {
             return false;

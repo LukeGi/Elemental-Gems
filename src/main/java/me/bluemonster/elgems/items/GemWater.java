@@ -30,7 +30,7 @@ public class GemWater extends ModItem
         if (!world.isRemote) //!isRemote = server
         {
             world.setBlock(x, y, z, Blocks.flowing_water);
-            Random random = new Random();
+            Random random = world.rand;
             if (random.nextInt(10) == 3)
             {
                 world.setBlock(x + 1, y, z, Blocks.sand);

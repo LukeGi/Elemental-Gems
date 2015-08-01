@@ -5,4 +5,5 @@ package me.bluemonster.elgems.proxy;
  */
 public interface IProxy
 {
+    void registerRenders();
 }

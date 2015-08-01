@@ -30,6 +30,7 @@ public class ElementalGems
     public void preInit(FMLPreInitializationEvent event)
     {
         ModRegistry.registerAll();
+        proxy.registerRenders();
         LogHelper.info(String.format("%s has finished pre-initializing.", Names.ModInfo.MOD_NAME));
     }
 
