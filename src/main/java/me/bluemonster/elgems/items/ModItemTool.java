@@ -11,6 +11,7 @@ import net.minecraft.world.World;
 public class ModItemTool extends ModItem
 {
     public ToolMaterials theToolMaterial;
+    public float efficiencyOnProperMaterial;
 
     public ModItemTool(String name, String type, ToolMaterials material)
     {
@@ -18,6 +19,8 @@ public class ModItemTool extends ModItem
         theToolMaterial = material;
         setMaxDamage(type.equals(Names.Tools.HOE) ? (int) Math.floor(material.getMaxUses() / 100) : material.getMaxUses());
         setMaxStackSize(1);
+        setHarvestLevel(type, material.getHarvestLevel());
+        this.efficiencyOnProperMaterial = material.getEfficiencyOnProperMaterial();
     }
 
     @Override

@@ -9,6 +9,7 @@ import me.bluemonster.elgems.reference.Names;
 import me.bluemonster.elgems.utility.LogHelper;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,6 +35,7 @@ public class ModRegistry
     public static Item earth_gem;
     public static Item living_gem;
     public static Item water_hoe;
+    public static Item water_sword;
     public static Item earth_pick;
 
     private static void registerItems()
@@ -44,6 +46,7 @@ public class ModRegistry
         earth_gem = new GemEarth();
         living_gem = new GemLiving();
         water_hoe = new HoeWater();
+        water_sword = new SwordWater();
         earth_pick = new PickEarth();
     }
 

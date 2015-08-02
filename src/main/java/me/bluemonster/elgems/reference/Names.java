@@ -33,6 +33,7 @@ public class Names
         };
         public static final String WATER_HOE = "water_hoe";
         public static final String EARTH_PICK = "earth_pick";
+        public static final String WATER_SWORD = "water_sword";
     }
 
     public static final class Tools

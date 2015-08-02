@@ -12,18 +12,13 @@ import net.minecraft.world.World;
 /**
  * @author bluemonster122 <boo122333@gmail.com>
  */
-public class PickEarth extends ModItem
+public class PickEarth extends ModItemTool
 {
     public static final String name = Names.Items.EARTH_PICK;
-    private float efficiencyOnProperMaterial;
 
     public PickEarth()
     {
-        super(name);
-        setMaxDamage(950);
-        setMaxStackSize(1);
-        setHarvestLevel(Names.Tools.PICK, 100);
-        this.efficiencyOnProperMaterial = 8f;
+        super(name, Names.Tools.PICK, ToolMaterials.EARTH);
     }
 
     public boolean onBlockDestroyed(ItemStack itemStack, World world, Block block, int x, int y, int z, EntityLivingBase entityLivingBase)

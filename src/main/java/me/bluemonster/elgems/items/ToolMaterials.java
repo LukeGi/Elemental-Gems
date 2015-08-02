@@ -2,7 +2,8 @@ package me.bluemonster.elgems.items;
 
 public enum ToolMaterials
     {
-        WATER(2,750,7,2,15);
+        WATER(2,750,7,2,15),
+        EARTH(100, 950, 8, 4, 2);
         private final int harvestLevel;
         private final int maxUses;
         private final float efficiencyOnProperMaterial;
