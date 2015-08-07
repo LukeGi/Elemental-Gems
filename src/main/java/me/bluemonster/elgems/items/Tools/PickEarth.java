@@ -1,11 +1,13 @@
-package me.bluemonster.elgems.items;
+package me.bluemonster.elgems.items.Tools;
 
 import me.bluemonster.elgems.reference.Names;
 import me.bluemonster.elgems.utility.BlockPos;
+import me.bluemonster.elgems.utility.MethodHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
@@ -40,8 +42,7 @@ public class PickEarth extends ModItemTool
     {
         for (int i = -1; i <= 1; i++)
         {
-            world.getBlock(pos.x, pos.y + i, pos.z).dropBlockAsItem(world, pos.x, pos.y, pos.z, 0, 0);
-            world.setBlockToAir(pos.x, pos.y + i, pos.z);
+            dropBlockSetBlock(world, Blocks.air, pos.x, pos.y + i, pos.z);
             itemStack.damageItem(1, entity);
         }
         return true;
@@ -51,5 +52,15 @@ public class PickEarth extends ModItemTool
     public float func_150893_a(ItemStack p_150893_1_, Block p_150893_2_)
     {
         return p_150893_2_.getMaterial() != Material.iron && p_150893_2_.getMaterial() != Material.anvil && p_150893_2_.getMaterial() != Material.rock ? super.func_150893_a(p_150893_1_, p_150893_2_) : this.efficiencyOnProperMaterial;
+    }
+
+    private boolean dropBlockSetBlock(World world, Block block, int x, int y, int z)
+    {
+        if (world.getBlock(x, y, z).getMaterial().equals(Material.rock))
+        {
+            world.getBlock(x, y, z).dropBlockAsItem(world, x, y, z, 0, 0);
+            world.setBlock(x, y, z, block);
+            return true;
+        } else return false;
     }
 }

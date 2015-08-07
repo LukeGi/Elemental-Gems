@@ -1,4 +1,4 @@
-package me.bluemonster.elgems.items;
+package me.bluemonster.elgems.items.Tools;
 
 public enum ToolMaterials
     {

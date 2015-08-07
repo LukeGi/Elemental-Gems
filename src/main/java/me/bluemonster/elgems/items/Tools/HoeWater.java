@@ -1,4 +1,4 @@
-package me.bluemonster.elgems.items;
+package me.bluemonster.elgems.items.Tools;
 
 import me.bluemonster.elgems.reference.Names;
 import net.minecraft.entity.player.EntityPlayer;

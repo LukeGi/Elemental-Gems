@@ -5,11 +5,13 @@ import me.bluemonster.elgems.blocks.ModBlock;
 import me.bluemonster.elgems.entities.EntityHandler;
 import me.bluemonster.elgems.entities.EntityLivingGem;
 import me.bluemonster.elgems.items.*;
+import me.bluemonster.elgems.items.Tools.HoeWater;
+import me.bluemonster.elgems.items.Tools.PickEarth;
+import me.bluemonster.elgems.items.Tools.SwordWater;
 import me.bluemonster.elgems.reference.Names;
 import me.bluemonster.elgems.utility.LogHelper;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,11 +42,11 @@ public class ModRegistry
 
     private static void registerItems()
     {
-        plain_gem = new GemPlain();
-        water_gem = new GemWater();
-        fire_gem = new GemFire();
-        earth_gem = new GemEarth();
-        living_gem = new GemLiving();
+        plain_gem = new Gem(Names.Items.GEMS[0]);
+        water_gem = new Gem(Names.Items.GEMS[1]);
+        fire_gem = new Gem(Names.Items.GEMS[2]);
+        earth_gem = new Gem(Names.Items.GEMS[3]);
+        living_gem = new Gem(Names.Items.GEMS[4]);
         water_hoe = new HoeWater();
         water_sword = new SwordWater();
         earth_pick = new PickEarth();

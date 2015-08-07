@@ -1,14 +1,11 @@
-package me.bluemonster.elgems.items;
+package me.bluemonster.elgems.items.Tools;
 
 import me.bluemonster.elgems.reference.Names;
-import me.bluemonster.elgems.registry.ModRegistry;
 import me.bluemonster.elgems.utility.BlockPos;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.Vec3;
 
 /**
  * @author bluemonster122 <boo122333@gmail.com>
