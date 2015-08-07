@@ -1,56 +1,35 @@
 package me.bluemonster.elgems.utility;
 
-import cpw.mods.fml.common.FMLLog;
-import me.bluemonster.elgems.reference.Names;
-import org.apache.logging.log4j.Level;
+
+import me.bluemonster.elgems.reference.Refs;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * @author bluemonster122 <boo122333@gmail.com>
  */
-public class LogHelper
-{
-    public static void log(Level logLevel, Object object)
-    {
-        FMLLog.log(Names.ModInfo.MOD_NAME, logLevel, String.valueOf(object));
+public class LogHelper {
+
+    public static final Logger LOGGER = LogManager.getLogger(Refs.ModInfo.MOD_ID);
+
+    public static void warn(String msg) {
+        LOGGER.warn(msg);
     }
 
-    public static void all(Object object)
-    {
-        log(Level.ALL, object);
+    public static void error(String msg) {
+        LOGGER.error(msg);
     }
 
-    public static void debug(Object object)
-    {
-        log(Level.DEBUG, object);
+    public static void info(String msg) {
+        LOGGER.info(msg);
     }
 
-    public static void error(Object object)
-    {
-        log(Level.ERROR, object);
+    public static void debug(String msg) {
+        LOGGER.debug(msg);
     }
 
-    public static void fatal(Object object)
+    private LogHelper()
     {
-        log(Level.FATAL, object);
     }
 
-    public static void info(Object object)
-    {
-        log(Level.INFO, object);
-    }
-
-    public static void off(Object object)
-    {
-        log(Level.OFF, object);
-    }
-
-    public static void trace(Object object)
-    {
-        log(Level.TRACE, object);
-    }
-
-    public static void warn(Object object)
-    {
-        log(Level.WARN, object);
-    }
 }

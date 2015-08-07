@@ -7,8 +7,9 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import me.bluemonster.elgems.items.Tools.PickFire;
 import me.bluemonster.elgems.proxy.IProxy;
-import me.bluemonster.elgems.reference.Names;
+import me.bluemonster.elgems.reference.Refs;
 import me.bluemonster.elgems.registry.ModRegistry;
 import me.bluemonster.elgems.utility.LogHelper;
 
@@ -16,33 +17,31 @@ import me.bluemonster.elgems.utility.LogHelper;
  * @author bluemonster122 <boo122333@gmail.com>
  */
 
-@Mod(modid = Names.ModInfo.MOD_ID, name = Names.ModInfo.MOD_NAME, version = Names.ModInfo.VERSION)
+@Mod(modid = Refs.MOD_ID, name = Refs.MOD_NAME, version = Refs.VERSION)
 public class ElementalGems
 {
-    @Instance(Names.ModInfo.MOD_ID)
+    @Instance(Refs.MOD_ID)
     public static ElementalGems instance;
 
-    @SidedProxy(clientSide = Names.ModInfo.CLIENT_PROXY, serverSide = Names.ModInfo.SERVER_PROXY)
-    public static IProxy proxy;
+    @SidedProxy(clientSide = Refs.CLIENT_PROXY, serverSide = Refs.SERVER_PROXY)
+    public static CommonProxy proxy;
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-        ModRegistry.registerAll();
-        proxy.registerRenders();
-        LogHelper.info(String.format("%s has finished pre-initializing.", Names.ModInfo.MOD_NAME));
+        LogHelper.info(String.format("%s has finished pre-initializing.", Refs.MOD_NAME));
     }
 
     @EventHandler
     public void Init(FMLInitializationEvent event)
     {
-        LogHelper.info(String.format("%s has finished initializing.", Names.ModInfo.MOD_NAME));
+        LogHelper.info(String.format("%s has finished initializing.", Refs.MOD_NAME));
     }
 
     @EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
-        LogHelper.info(String.format("%s has finished post-initializing.", Names.ModInfo.MOD_NAME));
+        LogHelper.info(String.format("%s has finished post-initializing.", Refs.MOD_NAME));
     }
 
 }
